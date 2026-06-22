@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Carrito - Game Storm</title>
+    <link rel="stylesheet" href="carrito.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="brand">
+            <img src="img/logo.jpeg" alt="logo">
+            <span>Game Storm</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="principal.html">Inicio</a></li>
+            </ul>
+        </nav>
+        <a href="carrito.html" class="cart-icon"></a>
+        <a href="index.html" class="login-btn">Iniciar Sesión</a>
+    </header>
+
+    <div class="navbar-spacer"></div>
+
+    <div class="cart-container">
+        <h1 class="subtitulos">ARMA TU COMPRA</h1>
+
+        <div class="catalogo-rapido">
+            <h3>Agrega productos a tu ticket:</h3>
+            <div class="grid-productos">
+                <div class="producto-item">
+                    <p>Audífonos Storm RGB</p>
+                    <span>$449</span>
+                    <button onclick="agregarAlTicket('Audífonos Storm RGB', 449)">+ Agregar</button>
+                </div>
+                <div class="producto-item">
+                    <p>Teclado Redragon K552</p>
+                    <span>$899</span>
+                    <button onclick="agregarAlTicket('Teclado Redragon K552', 899)">+ Agregar</button>
+                </div>
+                <div class="producto-item">
+                    <p>Mouse Logitech G502</p>
+                    <span>$1,299</span>                    <button onclick="agregarAlTicket('Mouse Logitech G502', 1299)">+ Agregar</button>
+                </div>
+                 <div class="producto-item">
+                    <p>Silla Gamer DXRacer</p>
+                    <span>$5,499</span>
+                    <button onclick="agregarAlTicket('Silla Gamer DXRacer', 5499)">+ Agregar</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="ticket" id="mi-ticket">
+            <div class="ticket-header">
+                <h2>GAME STORM</h2>
+                <p>Ticket de Compra</p>
+                <p class="fecha" id="fecha-hoy">Fecha: Cargando...</p>
+            </div>
+
+            <table class="ticket-table">
+                <thead>
+                    <tr>
+                        <th>Producto</th>
+                        <th>Cant.</th>
+                        <th>Precio</th>
+                    </tr>
+                </thead>
+                <tbody id="lista-compra">
+                    <tr class="fila-vacia"><td colspan="3" style="text-align:center; color:#999;">Tu carrito está vacío</td></tr>
+                </tbody>
+            </table>
+
+            <div class="ticket-total">
+                <h3>Total a pagar: <span id="total">$0 MXN</span></h3>
+            </div>
+
+            <div class="ticket-footer">
+                <p>¡Gracias por tu compra!</p>
+                <p class="mensaje-compra">Conserva este ticket para cualquier garantía.</p>
+                <p class="telefono-ticket" id="telefono-en-ticket">Cliente: Pendiente</p>
+            </div>
+        </div>
+
+        <div class="checkout-form">
+            <h3>Datos del Cliente</h3>
+            
+            <label for="phone">Número de Teléfono (Obligatorio):</label>
+            <input type="tel" id="phone" placeholder="55 1234 5678" required>
+            <label for="email">Correo Electrónico (Opcional):</label>
+            <input type="email" id="email" placeholder="tucorreo@ejemplo.com">
+
+            <label class="checkbox-label">
+                <input type="checkbox" id="usar-whatsapp" checked>
+                Enviar confirmación por WhatsApp
+            </label>
+
+            <div class="checkout-buttons">
+                <button onclick="finalizarCompra()" class="btn-comprar">Finalizar Compra</button>
+                <button onclick="window.print()" class="btn-imprimir">Imprimir Ticket</button>
+            </div>
+        </div>
+    </div>
+
+    <audio id="background-music" loop>
+        <source src="music.mp3/musicafondo.mp3" type="audio/mpeg">
+    </audio>
+    <button class="mute-btn" onclick="toggleMute()"><span id="volume-icon">🔇</span></button>
+    <script src="script.js"></script>
+
+</body>
+</html>

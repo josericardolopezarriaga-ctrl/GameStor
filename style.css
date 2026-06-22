@@ -1,0 +1,70 @@
+body {
+    background: #bdc3c7;
+    background: -webkit-linear-gradient(to right, #2c3e50, #bdc3c7); 
+    background: linear-gradient(to right, #2c3e50, #bdc3c7);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+.Inicio {
+    background: rgba(15, 14, 14, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    width: 300px;
+    height: max-content;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+h2 {
+    color: darkslategrey;
+    font-weight: 800;
+    font-size: xx-large;
+}
+
+input[type="text"] {
+    margin: 10px 0;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: rgba(0, 0, 0, 0.63);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+input[type="text"]::placeholder {
+    color: white;
+    font-family: 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.parrafos {
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    font-size: medium;
+    margin-bottom: 15px;
+}
+
+#inscribirse {
+    color: darkslategray;
+    cursor: pointer;
+}
+
+#boton {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: darkslategray;
+    color: black;
+    font-weight: 700;
+    font-size: large;
+    cursor: pointer;
+}
